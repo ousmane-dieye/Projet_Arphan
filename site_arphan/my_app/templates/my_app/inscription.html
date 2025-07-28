@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>INSCRIPTION</h1>
+    <form method="POST" action="{% url 'inscription' %}">
+        {% csrf_token %}
+        <p>Veuiles saisir votre nom</p>
+        <input type="text" name="nom">
+        <p>Veuiles saisir votre prenom</p>
+        <input type="text" name="prenom">
+        <p>Veuiles cocher votre departement</p>
+        <label>
+            <input type="radio" name="departement" value=" Informatique">Genie Informatique
+        </label>
+        <label>
+            <input type="radio" name="departement" value=" Electrique">Genie Electrique
+        </label>
+        <label>
+            <input type="radio" name="departement" value=" Mecanique">Genie Mecanique
+        </label>
+        <label>
+            <input type="radio" name="departement" value=" Chimique">Genie Chimique
+        </label>
+        <label>
+            <input type="radio" name="departement" value="Gestion"> Gestion
+        </label>
+        <p>Veuillez saisir le nom d'utilisateur</p>
+        <input type="text" name="nom_utilisateur"> 
+        <p>Veuillez saisir le mot de passe</p>
+        <input type="password" name="mot_de_passe"> 
+        <button type="submit">Valider</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>CONNEXION</h1>
+    <form method="POST">
+         {% csrf_token %}
+        <p>Veuillez saisir le nom d'utilisateur</p>
+        <input type="text" name="nom_utilisateur"> 
+        <p>Veuillez saisir le mot de passe</p>
+        <input type="password" name="mot_de_passe"> 
+        <button>Envoyer</button>
+    </form>
+    {% if erreur %}
+        <p style="color: red;">{{ erreur }}</p>
+    {% endif %}
+
+</body>
+</html>
